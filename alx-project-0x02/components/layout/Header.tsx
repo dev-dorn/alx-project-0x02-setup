@@ -1,28 +1,35 @@
-import { FC } from "react";
-import { HeaderProps } from "@/interfaces";
-import Head from 'next/head'
-import NavBar from "../common/NavBar";
+import React from "react";
+import Link from "next/link";
 
-const Header: FC<HeaderProps> = ({
-  title,
-  links,
-  logUrl = "/logo.png",
-  alt = "Logo",
-}) => {
+const Header: React.FC = () => {
   return (
-    <>
-    <Head>
-        <title>{title}</title>
-        <meta name="description" content={`${title} page`}/>
+    <header className="bg-gray-100 shadow-md">
+      <nav className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <div className="text-xl font-bold text-blue-600">
+          MyApp
+        </div>
 
-
-
-    </Head>
-    <header className="bg-white shadow">
-        <NavBar/>
-      {/* your header content */}
+        {/* Navigation Links */}
+        <ul className="flex items-center gap-6">
+          <li>
+            <Link href="/home" className="hover:text-blue-500">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className="hover:text-blue-500">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="/posts" className="hover:text-blue-500">
+              Posts
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
-    </>
   );
 };
 
