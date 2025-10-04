@@ -1,4 +1,5 @@
 import Card from "@/components/common/Card";
+import Header from "@/components/layout/Header";
 
 const listings = [
   {
@@ -25,6 +26,8 @@ const listings = [
 
 export default function HomePage() {
   return (
+    <>
+    <Header/>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
       {listings.map((listing) => (
         <Card
@@ -40,5 +43,6 @@ export default function HomePage() {
         />
       ))}
     </div>
+    </>
   );
 }
