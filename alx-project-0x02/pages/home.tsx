@@ -25,13 +25,20 @@ const listings = [
 
 export default function HomePage() {
   return (
-    <main className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Popular homes in Mombasa</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-3 gap-6">
-        {listings.map((listing) => (
-          <Card key={listing.id} {...listing} />
-        ))}
-      </div>
-    </main>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+      {listings.map((listing) => (
+        <Card
+          key={listing.id}
+          title={listing.title}
+          content={`Located in ${listing.location}`}
+          location={listing.location}
+          price={listing.price}
+          nights={listing.nights}
+          rating={listing.rating}
+          image={listing.image}
+          isGuestFavorite={listing.isGuestFavorite}
+        />
+      ))}
+    </div>
   );
 }

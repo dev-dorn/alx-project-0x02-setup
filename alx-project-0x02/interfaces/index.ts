@@ -25,7 +25,7 @@ export interface NavLinkProps {
 }
 export interface CardProps {
     title: string;
-    content?: string;
+    content: string;
     location: string;
     price: number;
     nights: number;
