@@ -4,7 +4,7 @@ import React from 'react'
 const posts = () => {
   return (
     <div>
-        <Header title="posts"/>
+        <Header />
       
     </div>
   )
