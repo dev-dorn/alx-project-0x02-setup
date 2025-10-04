@@ -1,11 +1,12 @@
 import Header from "@/components/layout/Header";
+import HomePage from "./home";
 
 
 export default function Home() {
   return (
     <div>
-        <Header/>
-        <h1>Welcome to week two of alxproject 2</h1>
+        <Header title="home"/>
+        <HomePage/>
 
     </div>
   );
