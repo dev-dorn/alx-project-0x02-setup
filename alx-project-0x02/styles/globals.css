@@ -6,10 +6,15 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #FF385C;
+  --color-primary-hover: #E03250;
+  --color-text: #222222;
+  --color-text-light: #717171;
+  --color-bg: #FFFFFF;
+  --color-bg-light: #F7F7F7;
+  --color-border: #DDDDDD;
+   --font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +25,5 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-bg text-text font-sans
 }
