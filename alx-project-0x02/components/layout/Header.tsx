@@ -1,24 +1,27 @@
 import { FC } from "react";
 import { HeaderProps } from "@/interfaces";
-import Head from "next/head";
+import Head from 'next/head'
 import NavBar from "../common/NavBar";
 
 const Header: FC<HeaderProps> = ({
   title,
-  links = [],
+  links,
   logUrl = "/logo.png",
   alt = "Logo",
 }) => {
   return (
     <>
-      <Head>
+    <Head>
         <title>{title}</title>
-        <meta name="description" content={`${title} page`} />
-      </Head>
+        <meta name="description" content={`${title} page`}/>
 
-      <header className="bg-white shadow">
-        <NavBar links={links} logUrl={logUrl} alt={alt} />
-      </header>
+
+
+    </Head>
+    <header className="bg-white shadow">
+        <NavBar/>
+      {/* your header content */}
+    </header>
     </>
   );
 };

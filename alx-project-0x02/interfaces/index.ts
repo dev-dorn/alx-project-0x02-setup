@@ -33,3 +33,10 @@ export interface CardProps {
     image: string;
     isGuestFavorite?:boolean;
 }
+export interface PostModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+    onSubmit: (date: {title: string; content: string}) => void;
+
+    
+}
